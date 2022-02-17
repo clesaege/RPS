@@ -37,6 +37,7 @@ contract RPS{
      */
     function play(Move _c2) payable {
         require(c2==Move.Null); // J2 has not played yet.
+        require(_c2!=Move.Null); // A move is selected.
         require(msg.value==stake); // J2 has paid the stake.
         require(msg.sender==j2); // Only j2 can call this function.
             
