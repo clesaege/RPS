@@ -50,7 +50,9 @@ contract RPS{
      *  @param _salt The salt used when submitting the commitment when the constructor was called.
      */
     function solve(Move _c1, uint256 _salt) {
+        require(_c1!=Move.Null); // J1 should have made a valid move.
         require(c2!=Move.Null); // J2 must have played.
+        
         require(msg.sender==j1); // J1 can call this.
         require(keccak256(_c1,_salt)==c1Hash); // Verify the value is the commited one.
         
