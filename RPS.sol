@@ -9,7 +9,7 @@ and/or modify it under the terms of the Do What The Fuck You Want
 To Public License, Version 2, as published by Sam Hocevar. See
 http://www.wtfpl.net/ for more details. */
 
-pragma solidity ^0.4.9;
+pragma solidity ^0.4.26;
 
 contract RPS{
     address public j1; // The first player creating the contract.
